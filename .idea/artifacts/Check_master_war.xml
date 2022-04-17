@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Check-master:war">
+    <output-path>$PROJECT_DIR$/Check-master/Check Maven Webapp/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Check-master</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Check.war">
+      <element id="artifact" artifact-name="Check-master:war exploded" />
+    </root>
+  </artifact>
+</component>
