@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </form>
 <div class="btn ue-clear">
 	<a href="javascript:;" class="confirm" onclick="addType()">确定</a>
-    <a href="${ctx}/toTypePage.action" class="clear"">返回</a>
+    <a href="${ctx}/toTypePage.action" class="clear">返回</a>
 </div>
 </body>
 <script type="text/javascript" src="${ctx}/js/jquery-1.11.1.min.js"></script>
@@ -67,7 +67,7 @@ function addType(){
 
 /* //情况所有
 function returnList(){
-	document.myform.attributes["action"].value = "${ctx}/toTypePage.action"; 
+	document.myform.attributes["action"].value = "$/{ctx}/toTypePage.action";
 	$("form").submit();
 } */
 

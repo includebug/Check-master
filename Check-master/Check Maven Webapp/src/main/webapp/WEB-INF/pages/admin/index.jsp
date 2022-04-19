@@ -30,13 +30,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <a href="javascript:;" class="msg-txt">消息</a>
                     <a href="javascript:;" class="msg-num">10</a>
                 </div> -->
-            </div>
-            <div class="toolbar ue-clear">
-                <a href="javascript:;" class="home-btn">首页</a>
-                <a href="javascript:;" class="quit-btn exit"></a>
-            </div>
-        </div>
-    </div>
+</div>
+<div class="toolbar ue-clear">
+    <a href="javascript:;" class="home-btn">首页</a>
+    <a href="javascript:;" class="quit-btn exit"></a>
+</div>
+</div>
+</div>
     <div id="bd">
     	<div class="wrap ue-clear">
         	<div class="sidebar">
@@ -47,6 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <ul class="subnav">
                         	<li><a href="javascript:;" onclick="formSubmit('${ctx}/toQuestionPage.action','mframe');this.blur();">试题管理</a></li>
                             <li><a href="javascript:;" onclick="formSubmit('${ctx}/toTypePage.action','mframe');this.blur();">题型管理</a></li>
+                            <li><a href="javascript:;" onclick="formSubmit('${ctx}/toValuePage.action','mframe');this.blur();">变量管理</a></li>
                         </ul>
                     </li>
                     <li class="konwledge">

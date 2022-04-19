@@ -91,9 +91,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  	 <td>${paper.endTime}</td>
 					 <td>${paper.score}</td>
 					 <td><font color="blue">
-					 	<c:if test="${paper.paperstate==0}">准备考试</c:if>
-						<c:if test="${paper.paperstate==1}">尚未开始</c:if>
-						<c:if test="${paper.paperstate==2}">考试结束</c:if>
+					 	<c:if test="${paper.paperState==0}">准备考试</c:if>
+						<c:if test="${paper.paperState==1}">尚未开始</c:if>
+						<c:if test="${paper.paperState==2}">考试结束</c:if>
 					 </td>
 	              </tr>
 				</c:forEach>
