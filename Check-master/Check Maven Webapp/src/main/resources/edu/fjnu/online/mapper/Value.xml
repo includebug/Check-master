@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.fjnu.online.mapper.ValueMapper">
+
+    <!-- 数据库表映射 -->
+    <resultMap id="valueRM" type="edu.fjnu.online.domain.Value">
+        <id property="valueId" column="valueid"/>
+        <result property="valueType" column="valuetype"/>
+        <result property="lowerLimit" column="lowerlimit"/>
+        <result property="upperLimit" column="upperlimit"/>
+    </resultMap>
+
+    <!-- 新增 -->
+    <insert id="insert" parameterType="edu.fjnu.online.domain.Value">
+        insert into t_value
+            (valuetype,lowerlimit,upperlimit)
+        values
+            (#{valueType},#{lowerLimit},#{upperLimit})
+    </insert>
+
+    <!-- 修改 -->
+    <update id="update" parameterType="edu.fjnu.online.domain.Value">
+        update t_value
+        <set>
+            <if test="valueType!=null">
+                valuetype=#{valueType},
+            </if>
+            <if test="lowerLimit!=null">
+                lowerlimit=#{lowerLimit},
+            </if>
+            <if test="upperLimit!=null">
+                upperlimit=#{upperLimit},
+            </if>
+        </set>
+        where valueid=#{valueId}
+    </update>
+
+    <!-- 查询所有记录 -->
+    <select id="find" parameterType="int" resultMap="valueRM">
+        select * from t_value
+        where 1=1
+    </select>
+
+    <!-- 查询一个录 -->
+    <select id="get" parameterType="edu.fjnu.online.domain.Value" resultMap="valueRM">
+        select * from t_value
+        where valueId=#{id}
+    </select>
+
+    <!-- 删除一条记录 -->
+    <delete id="delete" parameterType="int">
+        delete from t_value
+        where valueId=#{id}
+    </delete>
+</mapper>
